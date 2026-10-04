@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Attendance Manager application icon (source). Rendered by packaging/make_icon.py -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A8EEA"/>
+      <stop offset="1" stop-color="#1C5CAB"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="40" width="944" height="944" rx="220" fill="url(#bg)"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="58" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="232" y="262" width="560" height="538" rx="90"/>
+    <path d="M232 420h560M382 200v120M642 200v120"/>
+    <path d="M380 610l95 90 175-180" stroke-width="66"/>
+  </g>
+</svg>

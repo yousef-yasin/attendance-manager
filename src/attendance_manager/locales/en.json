@@ -1,0 +1,809 @@
+{
+  "app": {
+    "name": "Attendance Manager",
+    "name_line1": "Attendance",
+    "name_line2": "Manager",
+    "offline_note": "Works offline. Your data stays on this computer. Version {version}",
+    "already_open": "Attendance Manager is already open."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "courses": "Courses",
+    "sessions": "Attendance Sessions",
+    "students": "Students",
+    "reports": "Reports",
+    "settings": "Settings",
+    "backup": "Backup & Restore",
+    "tooltip": "{page}  ({shortcut})"
+  },
+  "pages": {
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "An overview of attendance for the selected course."
+    },
+    "courses": {
+      "title": "Courses",
+      "subtitle": "Each course and section keeps its own students and attendance."
+    },
+    "sessions": {
+      "title": "Attendance Sessions",
+      "subtitle": "Every uploaded attendance file is kept as its own session."
+    },
+    "students": {
+      "title": "Students",
+      "subtitle": "Everyone on the master list with their cumulative attendance."
+    },
+    "reports": {
+      "title": "Reports",
+      "subtitle": "Professional Excel reports, ready to print or share."
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Preferences for how attendance is evaluated and protected."
+    },
+    "backup": {
+      "title": "Backup & Restore",
+      "subtitle": "Keep a safe copy of all courses, attendance and original files."
+    }
+  },
+  "topbar": {
+    "course": "Course",
+    "switch_course": "Switch course",
+    "add_attendance_tooltip": "Upload a weekly attendance file (Ctrl+U)",
+    "archived_suffix": "{name}  (archived)",
+    "language_tooltip": "Interface language"
+  },
+  "actions": {
+    "add_attendance": "Add attendance",
+    "create_course": "Create course",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "save_changes": "Save changes",
+    "back": "Back",
+    "next": "Next",
+    "open": "Open",
+    "undo": "Undo",
+    "open_details": "Open details",
+    "view_details": "View details",
+    "view_session": "View session",
+    "open_original": "Open original file",
+    "open_report": "Open report",
+    "show_in_folder": "Show in folder"
+  },
+  "common": {
+    "more": "More",
+    "more_actions": "More actions",
+    "dismiss": "Dismiss",
+    "list_separator": ", ",
+    "and_more": "{names} +{count} more"
+  },
+  "status": {
+    "present": "Present",
+    "absent": "Absent",
+    "not_enrolled": "Not enrolled",
+    "active": "Active",
+    "removed": "Removed",
+    "archived": "Archived",
+    "selected": "Selected"
+  },
+  "standing": {
+    "perfect": "Perfect",
+    "good": "Good",
+    "warning": "Warning",
+    "at_risk": "At risk",
+    "no_sessions": "No sessions"
+  },
+  "plural": {
+    "students": {
+      "one": "{count} student",
+      "other": "{count} students"
+    },
+    "sessions": {
+      "one": "{count} attendance session",
+      "other": "{count} attendance sessions"
+    },
+    "active_sessions": {
+      "one": "{count} active session",
+      "other": "{count} active sessions"
+    },
+    "absences": {
+      "one": "{count} absence",
+      "other": "{count} absences"
+    },
+    "courses": {
+      "one": "{count} course",
+      "other": "{count} courses"
+    },
+    "rows": {
+      "one": "{count} row",
+      "other": "{count} rows"
+    },
+    "new_students": {
+      "one": "{count} new student",
+      "other": "{count} new students"
+    },
+    "updated_students": {
+      "one": "{count} updated student",
+      "other": "{count} updated students"
+    }
+  },
+  "course": {
+    "section": "Section {section}"
+  },
+  "dashboard": {
+    "welcome_title": "Welcome to Attendance Manager",
+    "welcome_text": "Start by creating a course and uploading its master student list (for example 00.xls). Then add each week's attendance file — the dashboard updates automatically.",
+    "create_first_course": "Create your first course",
+    "no_sessions_title": "No attendance recorded yet",
+    "no_sessions_text": "{students} enrolled in {course}. Upload the first weekly attendance file (for example 11.xls) to see statistics here.",
+    "kpi": {
+      "students": "Total students",
+      "sessions": "Attendance sessions",
+      "average": "Average attendance",
+      "present": "Present records",
+      "absent": "Absent records",
+      "perfect": "100% attendance",
+      "with_absences": "Students with absences",
+      "highest": "Highest attendance",
+      "most_absences": "Highest absence count",
+      "at_risk": "Students at risk"
+    },
+    "hint": {
+      "students": "enrolled on the master list",
+      "sessions": "lectures recorded",
+      "average": "of all attendance records",
+      "present": "student-lectures attended",
+      "absent": "student-lectures missed",
+      "perfect": "never missed a lecture",
+      "with_absences": "missed at least one lecture",
+      "highest": "{students} at this level",
+      "most_absences": "{students} · hover for names",
+      "no_absences": "no absences so far",
+      "at_risk": "below {limit}% attendance"
+    },
+    "trend_title": "Attendance trend by session",
+    "trend_subtitle": "Share of students present in each lecture.",
+    "distribution_title": "Attendance distribution",
+    "distribution_subtitle": "How many students fall in each attendance range.",
+    "list": {
+      "risk_title": "Students at risk",
+      "risk_subtitle": "Lowest attendance first.",
+      "most_absent_title": "Most absences",
+      "most_absent_subtitle": "Students who missed the most lectures.",
+      "recent_title": "Recent sessions",
+      "recent_subtitle": "The latest uploaded lectures.",
+      "nobody_at_risk": "Nobody is at risk. 🎉",
+      "no_absences": "No absences recorded.",
+      "risk_row": "{percent} · {absences}",
+      "absent_row": "{absences} of {sessions}",
+      "recent_row": "{date} · {present} present · {absent} absent"
+    }
+  },
+  "distribution": {
+    "bucket0": "Below 50%",
+    "bucket1": "50–74%",
+    "bucket2": "75–89%",
+    "bucket3": "90–99%",
+    "bucket4": "100%"
+  },
+  "charts": {
+    "students_series": "Students",
+    "trend_tooltip": "<b>{session}</b> · {date}<br>{percent}% attendance<br>{present} present · {absent} absent",
+    "distribution_tooltip": "<b>{range}</b><br>{students}",
+    "reference_tooltip": "Dashed line: at-risk limit ({limit}%)"
+  },
+  "courses": {
+    "no_term": "No section or term set",
+    "menu": {
+      "edit": "Edit course details…",
+      "update_roster": "Update student list…",
+      "unarchive": "Restore from archive",
+      "archive": "Archive course…",
+      "delete": "Delete permanently…"
+    },
+    "stat": {
+      "students": "Students",
+      "sessions": "Sessions",
+      "average": "Average attendance"
+    },
+    "open_dashboard": "Open dashboard",
+    "empty_title": "No courses yet",
+    "empty_text": "Create a course for each class and section you teach. You will need its master student list (for example 00.xls).",
+    "show_archived": "Show archived courses",
+    "all_archived": "All your courses are archived. Tick “Show archived courses” to see them."
+  },
+  "sessions": {
+    "default_title": "Lecture {number}",
+    "col": {
+      "session": "Session",
+      "date": "Date",
+      "file": "Original file",
+      "uploaded": "Uploaded",
+      "present": "Present",
+      "absent": "Absent",
+      "attendance": "Attendance",
+      "status": "Status"
+    },
+    "no_course_title": "Choose or create a course",
+    "no_course_text": "Attendance sessions belong to a course. Create a course first.",
+    "empty_title": "No attendance sessions yet",
+    "empty_text": "Upload a weekly attendance file (for example 11.xls). Each upload becomes a session that is stored permanently and can be opened at any time.",
+    "show_removed": "Show removed sessions",
+    "footer_note": "Removing a session only excludes it from the statistics. It stays stored and can be restored at any time. Attendance results themselves can never be edited.",
+    "count_with_removed": "{active} · {removed} removed",
+    "menu": {
+      "export": "Export session to Excel…",
+      "rename": "Rename / change date…",
+      "restore": "Restore session",
+      "remove": "Remove from statistics…"
+    }
+  },
+  "students": {
+    "col": {
+      "id": "Student ID",
+      "name": "Student name",
+      "present": "Present",
+      "absent": "Absent",
+      "percent": "Attendance %",
+      "status": "Status"
+    },
+    "filter": {
+      "all": "All students",
+      "perfect": "Perfect attendance",
+      "good": "Good",
+      "warning": "Warning",
+      "at_risk": "At risk",
+      "with_absences": "With absences",
+      "no_absences": "No absences",
+      "inactive": "Not enrolled any more"
+    },
+    "filter_tooltip": "Filter",
+    "no_course_title": "No course selected",
+    "no_course_text": "Students come from a course's master list. Create a course to get started.",
+    "search_placeholder": "Search by name, student ID or any detail…   (Ctrl+F)",
+    "showing": "Showing {shown} of {total}"
+  },
+  "reports": {
+    "full_title": "Full attendance report",
+    "full_subtitle": "One Excel workbook (.xlsx) with seven sheets:",
+    "sheet_desc": {
+      "summary": "Course details, key figures, every session and charts.",
+      "cumulative": "Every student with all master-file details, present, absent, % and status.",
+      "by_session": "A grid of P / A for every student in every lecture, with totals.",
+      "absence_ranking": "Students ordered from most to fewest absences.",
+      "highest": "Students ordered from best to lowest attendance.",
+      "at_risk": "Students below your at-risk and warning limits.",
+      "details": "One row per student per session — ideal for filtering in Excel."
+    },
+    "language_note": "Sheet names and headings follow the interface language. Student names, IDs, file names and imported data are kept exactly as they are.",
+    "generate": "Export report (Excel)…",
+    "single_title": "Report for a single lecture",
+    "single_text": "Open any session under Attendance Sessions and choose “Export session to Excel” for a one-lecture list of present and absent students.",
+    "go_to_sessions": "Go to Attendance Sessions",
+    "offline_note": "Reports are created on this computer only. Nothing is uploaded anywhere.",
+    "no_course": "Create a course first to generate a report.",
+    "course_line": "Course: {course} · {students} · {sessions}",
+    "save_dialog": "Save attendance report",
+    "busy": "Creating your report…"
+  },
+  "report": {
+    "sheet": {
+      "summary": "Summary",
+      "cumulative": "Cumulative Attendance",
+      "by_session": "Session by Session",
+      "absence_ranking": "Absence Ranking",
+      "highest": "Highest Attendance",
+      "at_risk": "At-Risk Students",
+      "details": "Student Details"
+    },
+    "col": {
+      "id": "Student ID",
+      "name": "Student Name",
+      "sessions": "Sessions",
+      "present": "Present",
+      "absent": "Absent",
+      "percent": "Attendance %",
+      "status": "Status",
+      "rank": "Rank",
+      "session_number": "Session #",
+      "session": "Session",
+      "date": "Date",
+      "attendance": "Attendance",
+      "overall_percent": "Overall %",
+      "overall_status": "Overall status",
+      "file": "Original file",
+      "range": "Attendance range",
+      "students": "Students"
+    },
+    "title": "Attendance Report",
+    "generated": "Generated {when}",
+    "course": "Course",
+    "course_name": "Course name",
+    "key_figures": "Key figures",
+    "sessions": "Sessions",
+    "distribution": "Attendance distribution",
+    "chart_trend": "Attendance by session",
+    "chart_distribution": "Students by attendance range",
+    "code_present": "P",
+    "code_absent": "A",
+    "grid_legend": "P = present, A = absent, — = not enrolled at the time",
+    "at_risk_note": "Students whose attendance is below {at_risk}%. Students between {at_risk}% and {warning}% are listed under “Warning”.",
+    "no_at_risk": "No students are currently at risk.",
+    "properties_title": "Attendance report — {course}",
+    "session_sheet": "Session",
+    "session_subtitle": "{course} · {date} · file: {file}",
+    "not_on_list": "Not on master list",
+    "filename": "Attendance Report - {course} - {date}",
+    "filename_section": "Sec {section}",
+    "kpi": {
+      "students": "Total students",
+      "sessions": "Attendance sessions",
+      "average": "Average attendance",
+      "present": "Total present records",
+      "absent": "Total absent records",
+      "perfect": "Students with 100% attendance",
+      "with_absences": "Students with at least one absence",
+      "highest": "Highest attendance",
+      "highest_absences": "Highest absence count",
+      "most_absent_names": "Students with most absences",
+      "at_risk": "Students at risk (below {limit}%)",
+      "warning": "Students on warning (below {limit}%)"
+    }
+  },
+  "settings": {
+    "language_title": "Language",
+    "language_subtitle": "Choose the interface language. The change applies immediately and is remembered.",
+    "instructor_title": "Instructor",
+    "instructor_subtitle": "Shown on generated reports.",
+    "instructor_placeholder": "e.g. Dr. Mohammad Smadi",
+    "instructor_name": "Your name",
+    "limits_title": "Attendance limits",
+    "limits_subtitle": "Used for the status labels, the dashboard and the reports.",
+    "at_risk_below": "“At risk” below",
+    "warning_below": "“Warning” below",
+    "limits_invalid": "⚠  The at-risk limit must not be higher than the warning limit.",
+    "limits_hint": "Perfect = 100% · Good = {warning}% or more · Warning = {at_risk}% to {warning}% · At risk = below {at_risk}%",
+    "backups_title": "Automatic backups",
+    "backups_subtitle": "A full backup is made once a day when you open the app.",
+    "auto_backup": "Create automatic daily backups",
+    "keep_latest": "Keep the latest",
+    "keep_suffix": " backups",
+    "discard": "Discard changes",
+    "save": "Save settings",
+    "storage_title": "Data storage",
+    "storage_subtitle": "All data stays on this computer. No internet connection is used.",
+    "open_data_folder": "Open data folder",
+    "open_logs_folder": "Open logs folder",
+    "info": {
+      "data_folder": "Data folder",
+      "database": "Database",
+      "version": "Version",
+      "version_value": "Attendance Manager {version} (data format {schema})",
+      "installation_id": "Installation ID"
+    }
+  },
+  "backup": {
+    "create_title": "Create a backup",
+    "create_text": "Saves everything — courses, students, every attendance session and the original Excel files — into a single .zip file. Keep it on a USB drive or another safe place.",
+    "backup_now": "Back up now…",
+    "restore_title": "Restore from a backup",
+    "restore_text": "Replaces the current data with the contents of a backup file. A safety backup of the current data is made automatically first, so nothing is lost.",
+    "restore_from_file": "Restore from file…",
+    "history_title": "Backups on this computer",
+    "history_text": "Automatic backups and safety copies made before restoring or deleting.",
+    "no_backups": "No backups yet.",
+    "restore_selected": "Restore selected…",
+    "open_folder": "Open backups folder",
+    "last_backup": "Last backup: {when}",
+    "never": "No backup has been made yet.",
+    "save_dialog": "Save backup",
+    "open_dialog": "Choose a backup to restore",
+    "busy_create": "Creating backup…",
+    "busy_restore": "Restoring backup…",
+    "size_kb": "{size} KB",
+    "size_mb": "{size} MB",
+    "kind": {
+      "automatic": "Automatic",
+      "manual": "Manual",
+      "before_delete": "Before deleting a course",
+      "before_restore": "Before restoring"
+    },
+    "col": {
+      "created": "Created",
+      "type": "Type",
+      "courses": "Courses",
+      "sessions": "Sessions",
+      "size": "Size",
+      "file": "File"
+    }
+  },
+  "confirm": {
+    "type_to_confirm": "To confirm, type  {phrase}  below:",
+    "archive": {
+      "title": "Archive this course?",
+      "message": "“{course}” will be hidden from the course list. All its data is kept and you can restore it at any time from Courses → Show archived courses.",
+      "button": "Archive course"
+    },
+    "delete": {
+      "title": "Delete this course permanently?",
+      "message": "“{course}” with {students} and {sessions} will be deleted. Consider archiving instead.",
+      "button": "Delete permanently",
+      "phrase": "DELETE",
+      "details": "A full backup is created automatically before deleting, so it can be recovered from Backup & Restore."
+    },
+    "restore": {
+      "title": "Restore this backup?",
+      "message": "All current data will be replaced by the backup from {when} ({courses}, {sessions}).",
+      "button": "Restore backup",
+      "details": "A safety backup of your current data is created first, so you can undo this."
+    }
+  },
+  "remove_session": {
+    "title": "Remove session",
+    "prompt": "“{session}” ({date}) will no longer count in the statistics.\nIt stays stored and can be restored at any time.\n\nReason (optional):"
+  },
+  "toast": {
+    "language_changed": "Language changed",
+    "course_created": "Course created",
+    "course_created_detail": "{course} · {students}",
+    "course_updated": "Course updated",
+    "roster_updated": "Student list updated",
+    "roster_updated_detail": "{added} added · {updated} updated",
+    "course_archived": "Course archived",
+    "course_restored": "Course restored",
+    "course_deleted": "Course deleted",
+    "course_deleted_detail": "A backup was saved first: {file}",
+    "select_course": "Select a course first",
+    "select_course_detail": "Open a course, then add its attendance.",
+    "course_is_archived": "This course is archived",
+    "course_is_archived_detail": "Restore it from the Courses page to add attendance.",
+    "session_saved": "{session} saved",
+    "session_saved_detail": "{present} present · {absent} absent. The dashboard is up to date.",
+    "session_exported": "Session exported",
+    "session_updated": "Session updated",
+    "session_removed": "Session removed from statistics",
+    "session_restored": "Session restored",
+    "report_saved": "Report saved",
+    "settings_saved": "Settings saved",
+    "backup_created": "Backup created",
+    "backup_restored": "Backup restored",
+    "backup_restored_detail": "Your previous data was saved as {file}."
+  },
+  "dialogs": {
+    "export_session": "Export session"
+  },
+  "files": {
+    "xlsx_filter": "Excel workbook (*.xlsx)",
+    "zip_filter": "Backup file (*.zip)",
+    "spreadsheet_filter": "Excel files (*.xls *.xlsx *.xlsm);;CSV files (*.csv *.tsv *.txt);;All files (*.*)",
+    "adjust_columns": "Adjust columns…",
+    "choose_another": "Choose another file",
+    "reading": "Reading {file}…"
+  },
+  "dropzone": {
+    "browse": "Browse for file…",
+    "supported": "Supported: .xls, .xlsx, .csv"
+  },
+  "columns": {
+    "window_title": "Choose columns",
+    "title": "Which column holds the student ID?",
+    "intro_roster": "We could not be completely sure how “{file}” is organized. Check the highlighted columns below. Students are matched with the weekly attendance files by their student ID — e-mail addresses such as 202400123@university.edu also work.",
+    "intro_attendance": "We could not be completely sure how “{file}” is organized. Check the highlighted columns below. Students are matched with the master student list by their student ID — e-mail addresses such as 202400123@university.edu also work.",
+    "sheet_item": "Sheet “{sheet}” ({rows})",
+    "no_header_row": "No header row",
+    "sheet": "Sheet",
+    "header_row": "Header row",
+    "first_row": "Data starts on row",
+    "id_column": "Student ID column",
+    "name_column": "Name column",
+    "use": "Use these columns",
+    "no_name_column": "(no name column)",
+    "column": "Column {letter}",
+    "status_none": "⚠  No student IDs found in the selected column.",
+    "status_found": "✓  {found} of {total} rows in the selected column contain a student ID."
+  },
+  "roster": {
+    "col": {
+      "row": "Row"
+    },
+    "found": "✓  {students} found",
+    "source": "From “{file}” (sheet “{sheet}”). Student ID column: “{id_column}” · Name column: “{name_column}” · Columns: {columns}",
+    "none": "none",
+    "more_notes": "…and {count} more notes."
+  },
+  "course_dialog": {
+    "window_create": "Create course",
+    "window_edit": "Edit course",
+    "title_create": "Create a new course",
+    "title_edit": "Edit course details",
+    "step1": "1  Course details",
+    "step2": "2  Master student list",
+    "name": "Course name *",
+    "name_placeholder": "e.g. Introduction to Programming",
+    "section": "Section",
+    "section_placeholder": "e.g. 1",
+    "semester": "Semester",
+    "semesters": [
+      "First",
+      "Second",
+      "Summer",
+      "Fall",
+      "Spring",
+      "Winter"
+    ],
+    "year": "Year",
+    "notes": "Notes",
+    "notes_placeholder": "Optional notes (room, schedule, …)",
+    "drop_title": "Upload the master student list",
+    "drop_hint": "This is the file with every enrolled student (for example 00.xls). Drag it here or browse for it.",
+    "drop_dialog": "Select the master student list",
+    "duplicate_title": "Course already exists",
+    "duplicate_message": "{message} Create another one anyway?",
+    "duplicate_button": "Create anyway"
+  },
+  "attendance": {
+    "drop_title": "Upload this week's attendance file",
+    "drop_hint": "For example 11.xls exported from Microsoft Teams. Students in the file are marked present; everyone else on the master list is marked absent.",
+    "drop_dialog": "Select the attendance file",
+    "session_title": "Session title",
+    "lecture_date": "Lecture date",
+    "card": {
+      "present": "Present",
+      "absent": "Absent",
+      "rate": "Attendance rate",
+      "unmatched": "Not on master list"
+    },
+    "override": "I understand this file was already uploaded — save it again as a new session",
+    "nothing_saved": "Nothing is saved until you click “Save attendance”.",
+    "save": "Save attendance",
+    "save_anyway": "Save anyway",
+    "file_hint": "Sheet “{sheet}” · {rows} · matched by column “{column}”",
+    "date_detected": "✓ Date detected from the file",
+    "date_not_found": "Date not found in the file — please check",
+    "of_students": "of {students}",
+    "rate_hint": "of the class attended",
+    "unmatched_hint": "listed, not counted",
+    "col": {
+      "row": "Row in file",
+      "identifier": "Identifier",
+      "name": "Name"
+    },
+    "empty_id": "(empty)",
+    "tab": {
+      "present": "Present ({count})",
+      "absent": "Absent ({count})",
+      "unmatched": "Not on master list ({count})",
+      "all_rows": "All rows in file ({count})"
+    }
+  },
+  "student_dialog": {
+    "window": "Student — {name}",
+    "id_line": "Student ID {id}",
+    "inactive": "This student is no longer on the current master list. Their attendance history is kept.",
+    "card": {
+      "sessions": "Sessions",
+      "present": "Present",
+      "absent": "Absent",
+      "rate": "Attendance rate"
+    },
+    "info_title": "Master list information",
+    "info_subtitle": "Everything recorded for this student in the master file.",
+    "history_title": "Session-by-session history",
+    "history_subtitle": "Present or absent in every recorded lecture.",
+    "col": {
+      "attendance": "Attendance"
+    },
+    "no_history": "No attendance has been recorded for this course yet."
+  },
+  "session_dialog": {
+    "window": "Session — {session}",
+    "subtitle": "{date} · original file “{file}” · uploaded {uploaded}",
+    "reason": " Reason: {reason}",
+    "removed_banner": "This session is removed from the statistics but kept in history. You can restore it from the Attendance Sessions page.",
+    "readonly_banner": "This is the stored historical record. Viewing it never changes it.",
+    "tab": {
+      "original_rows": "Original rows ({count})",
+      "file_info": "File information"
+    },
+    "sheet": "Sheet",
+    "open_original_tooltip": "Opens a copy of the uploaded file in Excel",
+    "export": "Export to Excel…"
+  },
+  "roster_dialog": {
+    "window": "Update student list",
+    "title": "Update the master student list",
+    "subtitle": "{course}. New students are added and details are refreshed. Nobody is deleted and past attendance is never changed.",
+    "drop_title": "Upload the updated master list",
+    "drop_hint": "The same kind of file you used when creating the course (e.g. 00.xls).",
+    "drop_dialog": "Select the updated master list",
+    "apply": "Apply update",
+    "summary": "{added} · {updated} · {unchanged} unchanged · {missing} no longer on the list",
+    "missing": "Not on the new list: {names}.",
+    "deactivate": "Mark the {students} no longer on the list as not enrolled (they won't be counted in future sessions; their history is kept)"
+  },
+  "edit_session": {
+    "window": "Rename session",
+    "title": "Session title and date",
+    "note": "Attendance results of this session are not changed.",
+    "field_title": "Title",
+    "field_date": "Date"
+  },
+  "notices": {
+    "currently_removed": " (currently removed)",
+    "exact_duplicate": "This exact file was already uploaded as “{session}”{state} on {date}. Saving it again would count that lecture twice.",
+    "is_master_list": "This is the master student list, not a weekly attendance file. Every student would be marked present.",
+    "nobody_matched": "None of the students on this course's master list were found in this file. Check that you picked the right course and file.",
+    "mostly_unknown": "Most people in this file are not on this course's master list. Is this the right course?",
+    "same_students": "Exactly the same students were present in “{session}”. Make sure this is not the same lecture uploaded twice.",
+    "same_name": "A different file with the same name was uploaded before (“{session}”).",
+    "same_date": "“{session}” is already recorded on this date.",
+    "unmatched": {
+      "one": "{count} person in the file is not on the master list (for example the instructor or guests). They are listed but not counted.",
+      "other": "{count} people in the file are not on the master list (for example the instructor or guests). They are listed but not counted."
+    },
+    "repeated": {
+      "one": "{count} student appears more than once in the file (e.g. re-joined); each is counted once.",
+      "other": "{count} students appear more than once in the file (e.g. re-joined); each is counted once."
+    }
+  },
+  "import": {
+    "notes": {
+      "no_id_column": "No column containing student IDs could be found automatically.",
+      "multiple_sheets": "The file has {count} sheets; using “{sheet}”.",
+      "ambiguous": "More than one column contains ID-like numbers. Please confirm which one holds the student ID.",
+      "few_ids": "Only a few rows contain recognizable student IDs.",
+      "some_ids": "Some rows do not contain a recognizable student ID.",
+      "no_header": "No header row was found; columns were identified from their contents."
+    },
+    "skipped": {
+      "header": "Repeated header row",
+      "text": "Ignored text “{text}”"
+    },
+    "warn": {
+      "no_id": "Row {row}: no student ID — row skipped.",
+      "not_id": "Row {row}: “{value}” does not look like a student ID — row skipped.",
+      "duplicate": "Row {row}: student ID {id} appears more than once (first on row {first}); the first entry is used.",
+      "no_name": "Row {row}: student {id} has no name.",
+      "no_name_column": "No student name column was found. Names will be shown as “(no name)”."
+    },
+    "no_name": "(no name)",
+    "generic": {
+      "student_id": "Student ID",
+      "name": "Name",
+      "column": "Column {letter}"
+    }
+  },
+  "errors": {
+    "title": {
+      "generic": "Something went wrong",
+      "course_not_deleted": "The course was not deleted",
+      "original_not_opened": "The original file could not be opened",
+      "session_not_exported": "The session could not be exported",
+      "report_not_created": "The report could not be created",
+      "settings_not_saved": "Settings were not saved",
+      "backup_not_created": "The backup was not created",
+      "backup_cannot_restore": "This backup cannot be restored",
+      "backup_not_restored": "The backup was not restored",
+      "file_unusable": "This file could not be used",
+      "no_students": "No students found",
+      "check_details": "Please check the course details",
+      "attendance_not_saved": "Attendance was not saved",
+      "roster_not_updated": "The student list was not updated",
+      "session_not_changed": "The session was not changed"
+    },
+    "unexpected": "An unexpected problem occurred. Your saved data is safe.\n\nIf this keeps happening, please send the log file (Settings → Open logs folder) to support.",
+    "crash": "An unexpected problem occurred. Your saved data is safe.\n\nDetails were written to the log file:\n{log}",
+    "database_open": "The attendance database could not be opened.\n\n{error}\n\nYou can restore a backup from {backups}.",
+    "schema_too_new": "This data was created by a newer version of Attendance Manager.\n\nPlease install the latest version of Attendance Manager.",
+    "schema_too_new_detail": "This data was created by a newer version of Attendance Manager (schema {schema}).",
+    "page_refresh_title": "This page could not be refreshed",
+    "page_refresh_detail": "Your data is safe. See the log file for details.",
+    "original_missing": "The stored original file is missing or was modified.",
+    "course_has_no_students": "“{course}” has no students. Upload the master student list first.",
+    "duplicate_session": "This file was already uploaded as “{session}” ({date}). Uploading it again would count the same lecture twice.",
+    "session_title_too_long": "The session title is too long (120 characters maximum).",
+    "session_title_required": "Please enter a session title.",
+    "roster_changed": "The student list of this course changed. Please upload the file again.",
+    "file_changed": "The file changed on disk after it was checked. Please upload it again.",
+    "report_locked": "“{file}” could not be saved. If it is open in Excel, close it and try again.",
+    "course": {
+      "name_required": "Please enter the course name.",
+      "name_too_long": "The course name is too long (150 characters maximum).",
+      "field_too_long": "{field} is too long (50 characters maximum).",
+      "duplicate": "A course with the same name, section, semester and year already exists.",
+      "duplicate_other": "Another course with the same name, section, semester and year already exists."
+    },
+    "settings": {
+      "thresholds": "Attendance limits must be between 0 and 100, and the at-risk limit must not be higher than the warning limit.",
+      "keep_range": "Keep between 1 and 365 automatic backups."
+    },
+    "backup": {
+      "verify_failed": "The backup file could not be verified after writing.",
+      "write_failed": "The backup could not be written to “{path}”.",
+      "missing": "The backup file “{file}” does not exist.",
+      "not_backup_or_damaged": "“{file}” is not an Attendance Manager backup or is damaged.",
+      "not_backup": "“{file}” is not an Attendance Manager backup.",
+      "newer_version": "This backup was made by a newer version of Attendance Manager. Please update first.",
+      "corrupt_member": "The backup is damaged (file “{file}” is corrupt).",
+      "unsafe": "The backup contains unsafe file paths and was rejected.",
+      "no_database": "The backup does not contain a database.",
+      "checksum": "The backup database failed its checksum. The backup is damaged.",
+      "db_damaged": "The database inside the backup is damaged.",
+      "restore_failed": "The backup could not be restored. Your data was not changed."
+    },
+    "import": {
+      "not_found": "The file “{file}” could not be found.",
+      "not_a_file": "“{file}” is not a file.",
+      "empty": "The file “{file}” is empty.",
+      "too_large": "The file “{file}” is too large to be an attendance sheet.",
+      "locked": "The file “{file}” could not be opened. Close it in Excel and try again.",
+      "no_data": "The file “{file}” does not contain any data.",
+      "password": "“{file}” is password-protected. Remove the password in Excel and try again.",
+      "invalid_xls": "“{file}” is not a valid Excel file or is damaged.",
+      "invalid_xlsx": "“{file}” is damaged or is not a valid Excel (.xlsx) file.",
+      "binary": "This file is not a spreadsheet (it looks like a binary file).",
+      "no_sheet": "The selected sheet does not exist in this file.",
+      "no_column": "The selected student ID column does not exist in this sheet.",
+      "no_students": "No students were found in this file. Make sure it is the master student list and that the student ID column is selected correctly.",
+      "detect_failed": "The student ID column could not be detected automatically. Please choose it manually."
+    }
+  },
+  "date": {
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "months_short": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "weekdays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "weekdays_short": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "format": {
+      "date": "{day} {mon} {year}",
+      "weekday_date": "{wd} {day} {mon} {year}",
+      "long": "{weekday}, {day} {month} {year}",
+      "short": "{day} {mon}",
+      "datetime": "{day} {mon} {year} {time}",
+      "long_datetime": "{weekday} {day} {month} {year}, {time}"
+    },
+    "qt_format": "dddd, d MMMM yyyy"
+  }
+}

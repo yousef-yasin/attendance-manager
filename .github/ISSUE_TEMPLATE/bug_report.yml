@@ -1,0 +1,45 @@
+name: Bug report
+description: Report a problem with Attendance Manager
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not attach real attendance files, rosters, reports, databases or screenshots that show
+        student names, IDs or e-mail addresses.** Describe the file structure instead, or reproduce
+        the problem with fictional data.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Shown in the sidebar footer (for example 1.0.0).
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Interface language
+      options: [English, العربية (Arabic), Both]
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 23H2
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: File involved (structure only)
+      description: Type of file (Teams report, .xlsx export, …), which columns it has, and whether it has a header row. No real data.
+  - type: textarea
+    id: log
+    attributes:
+      label: Log excerpt
+      description: From %LOCALAPPDATA%\AttendanceManager\logs. Remove any names, IDs or e-mail addresses first.
+      render: text
